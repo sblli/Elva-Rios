@@ -1,0 +1,159 @@
+.inicio {
+    padding-top: 150px; 
+    padding-bottom: 80px;
+}
+body{
+    background-color: #f8f6f6;
+}
+
+.fondo {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    right: -25px;
+    bottom: -25px;   
+    background-color: #f8c9d7; 
+    border-radius: 2.5rem; 
+    transform: rotate(4deg); 
+    z-index: 1;
+    filter: blur(1px);
+    opacity: 1;
+}
+
+.marquee-container {
+    background-color: #eee;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.marquee-content {
+    display: inline-block;
+    margin: 0 60px;
+    gap: 150px; 
+    letter-spacing: -1px;
+    display: inline-block;
+    animation: marquee 25s linear infinite;
+}
+
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+
+.icon-about {
+        width: 80px;
+        height: 80px;
+        background-color: #feeaf1;
+        border-radius: 50%;
+}
+
+.flip-card-container {
+    perspective: 1000px;
+    height: 350px; 
+}
+
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-container:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 2rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-front {
+    background-color: #ffffff;
+}
+
+.icon-about {
+    width: 80px;
+    height: 80px;
+    background-color: #feeaf1; 
+    border-radius: 50%;
+}
+
+.icon-about i {
+    color: #ee2b6c; 
+    font-size: 2rem;
+}
+
+.flip-card-back {
+    background-color: #ee2b6c;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back h4 {
+    color: white;
+}
+
+.flip-card-back p {
+    color: rgba(255, 255, 255, 0.9);
+}
+.packs {
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+    will-change: transform;
+}
+.packs:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.portafolio-card {
+    position: relative;
+    aspect-ratio: 9/16;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+.portafolio-card video {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+}
+
+.portafolio-card:hover video {
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-video{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white; 
+}
